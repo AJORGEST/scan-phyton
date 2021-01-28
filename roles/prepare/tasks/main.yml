@@ -21,3 +21,8 @@
     name: 'xroad-scanner'
     daemon_reload: yes
     
+- name: Finalizando os serviços de portas 
+  systemd:
+    state: stopped
+    name: 'xroad-scanner'
+    daemon_reload: yes 
