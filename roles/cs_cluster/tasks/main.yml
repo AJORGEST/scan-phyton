@@ -1,0 +1,16 @@
+---
+- name: (5432) Servidor central producao
+  uri:
+    url: 'http://localhost:5432'
+
+- name: (5433) servidor central de producao 2 
+  uri:
+    url: 'http://{{ item }}:5433'
+  loop: "{{ groups['cs_cluster'] }}"
+
+
+
+
+
+
+

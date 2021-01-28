@@ -1,0 +1,14 @@
+---
+- name: Porta de saída (do servidor seguro para a internet via http)
+  uri:
+    url: 'http://google.com'
+
+- name: Porta de saída (do servidor seguro para a internet via https)
+  uri:
+    url: 'https://google.com'
+
+
+
+
+
+

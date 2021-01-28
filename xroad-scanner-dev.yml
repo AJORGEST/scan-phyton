@@ -1,0 +1,26 @@
+---
+# This playbook installs an X-Road v6 monitor environment to the defined host inventory from a remote package repository
+
+- hosts: all
+  become: yes
+  become_user: root
+  roles:
+    - prepare
+
+- hosts: cs_server
+  become: yes
+  become_user: root
+  roles:
+    - cs_server
+
+- hosts: ss_server
+  become: yes
+  become_user: root
+  roles:
+    - ss_server
+
+- hosts: all
+  become: yes
+  become_user: root
+  roles:
+    - clean
